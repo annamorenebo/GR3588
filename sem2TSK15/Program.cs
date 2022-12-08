@@ -10,7 +10,7 @@ if(number>7)
 
 } else
 {
-        Console.Write ("Нет ");
+    Console.Write ("Нет ");
 }
     
 
