@@ -2,7 +2,6 @@
 
 int result = number%100/10;
 
-    
 Console.Write ($"вторая цифра числа "+ result);
 
     
