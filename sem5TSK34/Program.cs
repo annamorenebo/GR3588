@@ -36,31 +36,25 @@ int CountEven(int[] arr)
 return res;
 }
 
-int[] BubbletArr(int[] array)
+void BubbleSort(int[] array)
  {  
-     int[] outArr = new int[array.Length];
-     for (int i = 1; i < array.Length; i++)
-       
-        {for(int j=0; j<array.Length-1; j++)
-        
+    for (int i = 1; i < array.Length; i++)
+    {
+        for(int j=0; j<array.Length-1; j++)
             if( array[j+1]<array[j] )
-            {   int temp=0;
-            temp=array[j];
-            array[j]=array[j+1];
-            array[j+1]= temp;
-        
+            {   
+                int temp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = temp;
             }
-        
      }
-     return outArr;
  }
 
 int[] testArr = GenArray(120, 100,1000);
-BubbletArr(testArr);
-CountEven(testArr);
 Print1DArr(testArr);
 Console.WriteLine();
-
-
-
-PrintData("количество четных чисел :" , CountEven(testArr) );
+Console.WriteLine("Отсортированный массив:");
+BubbleSort(testArr);
+Print1DArr(testArr);
+Console.WriteLine();
+PrintData("Количество четных чисел :" , CountEven(testArr));
