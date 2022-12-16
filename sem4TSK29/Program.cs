@@ -1,26 +1,27 @@
-﻿int ReadData(string msg)
+﻿//метод считывает данные от пользователя
+int ReadData(string msg)
 {
     Console.WriteLine(msg);
     return int.Parse(Console.ReadLine() ?? "0");
 }
-
+ //выводит массив
 void PrintData(string res, int[] arr)
 {
     Console.WriteLine(res);
     PrintArr(arr);
 }
-
-int[] GenArr(int num,int numL, int numH)
+ //генерирует массив по заданным параметрам:  верхней и нижней границе массива
+int[] GenArr(int numL, int numH)
 {
     Random rnd = new Random();
-    int[] arr = new int[num];
+    int[] arr = new int[8];
     for (int i = 0; i < 8; i++)
     {
         arr[i] = rnd.Next(numL, numH);
     }
     return arr;
 }
-
+// фомирует запись массива
 void PrintArr(int[] arr)
 {
     Console.Write("[");
@@ -33,7 +34,7 @@ void PrintArr(int[] arr)
 
 int arrLow = ReadData("Введите нижнюю границу массива:");
 int arrHigth = ReadData("Введите верхнюю границу массива:");
-int[] arr = GenArr(8,arrLow,arrHigth);
+int[] arr = GenArr(arrLow,arrHigth);
 
 PrintData("Сгененрированный массив:",arr);
 
