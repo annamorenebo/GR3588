@@ -1,5 +1,5 @@
 ﻿
-//метод считывает введенную формулу для прямой
+//метод считывает введенную строку
  string? ReadData(string msg)
 {
     Console.WriteLine(msg);
