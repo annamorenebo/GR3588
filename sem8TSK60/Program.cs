@@ -1,11 +1,11 @@
 ﻿List<int> numList; 
  // считываем данные от пользователя
 int ReadData(string line)
- {
+{
      Console.Write(line);
      int number = int.Parse(Console.ReadLine() ?? "0");
      return number;
- }
+}
 
 // метод заполняет массив уникальными  двузначными числами
 int[,,] Fill3DArray(int countX, int countY, int countZ)
@@ -35,8 +35,7 @@ void Print3DArray(int[,,] matrix)
         {
             for(int k = 0; k < matrix.GetLength(2); k++)
             {
-                //Console.Write("[{0},{1},{2}]", i, j, k);
-                Console.Write(matrix[i, j, k] + "  ");
+                Console.Write("[{0},{1},{2}]: {3}  ", i, j, k, matrix[i, j, k]);
             }
         Console.WriteLine();
         }
