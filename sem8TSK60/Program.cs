@@ -55,7 +55,7 @@ int GenNum(List<int> num)
 
 int X = ReadData("Введите значение измерения Х ");
 int Y = ReadData("Введите значение измерения Y ");
-int Z = ReadData("Введите значение измерения Х ");
+int Z = ReadData("Введите значение измерения Z ");
 
 numList = new List<int>();
 
